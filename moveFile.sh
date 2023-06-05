@@ -3,7 +3,7 @@ for file in `ls *.txt`
 do
 	folderName=`echo $file | awk -F . '{print $1}'`;
 	echo $folderName;
-	if [ -d $folderName ]
+	if [ $folderName ]
 	then
    		rm -r $folderName;
 	fi
